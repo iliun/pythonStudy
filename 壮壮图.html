@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="8e145f74e8f741eea1a2094a7d58a7f7" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="46b214f2a5174c2d92ce1a90ae5733b6" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_8e145f74e8f741eea1a2094a7d58a7f7 = echarts.init(
-            document.getElementById('8e145f74e8f741eea1a2094a7d58a7f7'), 'white', {renderer: 'canvas'});
-        var option_8e145f74e8f741eea1a2094a7d58a7f7 = {
+        var chart_46b214f2a5174c2d92ce1a90ae5733b6 = echarts.init(
+            document.getElementById('46b214f2a5174c2d92ce1a90ae5733b6'), 'white', {renderer: 'canvas'});
+        var option_46b214f2a5174c2d92ce1a90ae5733b6 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -48,116 +48,79 @@
     ],
     "series": [
         {
-            "type": "line",
-            "name": "\u6269\u5145\u524dA",
-            "connectNulls": false,
-            "symbolSize": 4,
-            "showSymbol": true,
-            "smooth": false,
-            "clip": true,
-            "step": false,
+            "type": "bar",
+            "name": "shop1_sales",
+            "legendHoverLink": true,
             "data": [
-                [
-                    "0-20",
-                    607
-                ],
-                [
-                    "20-50",
-                    711
-                ],
-                [
-                    "50-100",
-                    1038
-                ],
-                [
-                    "100-200",
-                    3451
-                ],
-                [
-                    "200\u4ee5\u4e0a",
-                    3876
-                ]
+                607,
+                711,
+                1038,
+                3451,
+                3876,
+                15409
             ],
-            "hoverAnimation": true,
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
             "label": {
                 "show": true,
                 "position": "top",
                 "margin": 8
-            },
-            "lineStyle": {
-                "show": true,
-                "width": 1,
-                "opacity": 1,
-                "curveness": 0,
-                "type": "solid"
-            },
-            "areaStyle": {
-                "opacity": 0
-            },
-            "zlevel": 0,
-            "z": 0
+            }
         },
         {
-            "type": "line",
-            "name": "\u6269\u5145\u540eB",
-            "connectNulls": false,
-            "symbolSize": 4,
-            "showSymbol": true,
-            "smooth": false,
-            "clip": true,
-            "step": false,
+            "type": "bar",
+            "name": "shop2_sales",
+            "legendHoverLink": true,
             "data": [
-                [
-                    "0-20",
-                    6888
-                ],
-                [
-                    "20-50",
-                    7023
-                ],
-                [
-                    "50-100",
-                    7989
-                ],
-                [
-                    "100-200",
-                    8873
-                ],
-                [
-                    "200\u4ee5\u4e0a",
-                    8285
-                ]
+                4888,
+                7023,
+                3989,
+                5873,
+                8876,
+                6409
             ],
-            "hoverAnimation": true,
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
             "label": {
                 "show": true,
                 "position": "top",
                 "margin": 8
-            },
-            "lineStyle": {
-                "show": true,
-                "width": 1,
-                "opacity": 1,
-                "curveness": 0,
-                "type": "solid"
-            },
-            "areaStyle": {
-                "opacity": 0
-            },
-            "zlevel": 0,
-            "z": 0
+            }
         }
     ],
     "legend": [
         {
             "data": [
-                "\u6269\u5145\u524dA",
-                "\u6269\u5145\u540eB"
+                "shop1_sales",
+                "shop2_sales"
             ],
             "selected": {
-                "\u6269\u5145\u524dA": true,
-                "\u6269\u5145\u540eB": true
-            }
+                "shop1_sales": true,
+                "shop2_sales": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
         }
     ],
     "tooltip": {
@@ -229,9 +192,25 @@
                 }
             }
         }
-    ]
+    ],
+    "title": [
+        {
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": {
+        "show": true,
+        "type": "slider",
+        "realtime": true,
+        "start": 20,
+        "end": 80,
+        "orient": "vertical",
+        "zoomLock": false,
+        "filterMode": "filter"
+    }
 };
-        chart_8e145f74e8f741eea1a2094a7d58a7f7.setOption(option_8e145f74e8f741eea1a2094a7d58a7f7);
+        chart_46b214f2a5174c2d92ce1a90ae5733b6.setOption(option_46b214f2a5174c2d92ce1a90ae5733b6);
     </script>
 </body>
 </html>
