@@ -114,6 +114,25 @@ def interview3():
             word_dict[i] += 1
     print(sorted(word_dict.items(),key=operator.itemgetter(1),reverse=True)[:10])
 
+def interview4():
+    l1 = [3, 4, 5, 6, 7]
+    l2 = [4, 5, 6, 7, 8]
+    temp = []
+    while len(l1) > 0 and len(l2) > 0:
+        if l1[0] <= l2[0]:
+            temp.append(l1[0])
+            del l1[0]
+        else:
+            temp.append(l2[0])
+            del l2[0]
+    while len(l1)>0:
+        temp.append(l1[0])
+        del l1[0]
+    while len(l2)>0:
+        temp.append(l2[0])
+        del l2[0]
+    print(temp)
+
 
 if __name__ == '__main__':
-    interview3()
+    interview4()
