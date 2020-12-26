@@ -103,6 +103,7 @@ def interview3():
     word_dict = {}
     with open('./zxs.txt','r') as f:
         value = f.readlines()
+        print(value)
         for i in value:
             i = i.strip()
             word = re.findall(r'[a-zA-Z]+',i)
@@ -153,15 +154,106 @@ def func1(l):
         if l[i] % 2 > 0:
             l.insert(0, l.pop(i))
     print(''.join(str(e) for e in l))
-
+#两个列表中相同元素与不同元素
 def interview6():
-    a = 10
-    b = 20
-    c = [a]
-    a = 15
-    print(c)
+    list1 = [3, 2, 3, 5, 7, 1, 6]
+    list2 = [1, 4, 2, 8, 9, 5]
+    xiangtong = []
+    butong = []
+    for i in list1:
+        if i not in list2:
+            butong.append(i)
+        else:
+            xiangtong.append(i)
+    print(xiangtong)
+    print(butong)
+
+#列表中有没有两数相加等于8，返回下标
+def study():
+    list1 = [2, 3, 5, 7]
+    value = 8
+    for i in list1:
+        if value - i in list1 and (value - i)!=i :
+            return [list1.index(i),list1.index(value-i)]
+
+
+
+
+
+
+#编写一个函数来查找字符串数组中的最长公共前缀
+def study1():
+    list1 =  ["flower","flow","flight"]
+    list2 = ["dog”,”carcar","car"]
+    list3 = []
+    result  = ''
+    if len(list1) == 0:
+        return 0
+    for i in zip(*(list3)):
+        print(i)
+        if len(set(i)) == 1:
+            result += i[0]
+        else:
+            break
+    print(result)
+
+# 一支中性笔，设计case：
+# 通过测试：可正常写出字（汉字or英文or其他）
+# 功能测试：
+# 笔的长度，粗细
+# 是否可替换笔芯
+# 笔的开关
+#
+# 易用性：
+# 儿童使用：长度，粗细
+# 是否容易更换笔芯
+#
+# 兼容性：
+# 各种笔芯的兼容性
+# 笔芯颜色的兼容
+# 使用场景的兼容（白纸or画板or玻璃）
+#
+# 安全性：
+# 儿童使用是否容易将笔墨吸出来
+# 是否易碎
+# 是否可拆卸为小部件（儿童的安全性）
+#
+# UI：
+# 文案是否不易接受（强迫症or密集恐惧症）
+# 敏感文字（反动思想的文字）
+# 颜色：避免黑色
+#
+# 其他：
+# 不同温度（高温or低温）
+# 压强
+# 易于放置（满足正常铅笔盒的长度）
+
+
+
+
+
+
+#判断一个整数是不是回文数
+def study3():
+    num = 12321
+    num1 = -12321
+    num2 = 123321
+    #判断整数的范围
+    # if
+    #     pass
+    str1 = str(num3)
+    if len(str1) == 0 :
+        return 0
+    for i in str1:
+        if i == '-':
+            return 0
+        else:
+            res = str1[::-1]
+            if str1 == res :
+                return 1
+
 
 
 
 if __name__ == '__main__':
-    interview6()
+    print(study3())
