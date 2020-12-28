@@ -252,8 +252,109 @@ def study3():
             if str1 == res :
                 return 1
 
+#括号匹配
+def f1():
+    str1 = '{}{}{}'
+    if len(str1)%2 != 0 :
+        return False
+    else:
+        while True:
+            len1 = len(str1)
+            str1 = str1.replace('{}','')
+            str1 = str1.replace('[]','')
+            str1 = str1.replace('()','')
+            len2 = len(str1)
+            if len1 == len2:
+                if len2 == 0:
+                    return True
+                else:
+                    return False
 
+def f2():
+    list1 = [1,1,2,3,3]
+    if len(list1)==0 or len(list1)==1:
+        return len(list1)
+    else :
+        for i in range(len(list1)-1,0,-1):
+            if list1[i] == list1[i-1]:
+                list1.pop(i)
+    return len(list1)
+
+def f3():
+    haystack = 'hello'
+    needle = 'lo'
+    len_haystack = len(haystack)
+    len_needle = len(needle)
+    if len_needle > len_haystack :
+        return -1
+    else :
+        for i in range(0,len_haystack-len_needle+1):
+            if haystack[i:i+len_needle] == needle :
+                return i
+        else:
+            return -1
+#搜索插入位置
+def f4():
+    list1 =  [1,3,5,6]
+    target = 0
+    for i in range(len(list1)):
+        if list1[i]>= target:
+            return i
+    else:
+        return i+1
+def f5():
+    nums = [-2,1]
+    result = nums[0]
+    count = 0
+    for i in range(1,len(nums)):
+        count = count + nums[i]
+        if count <0:
+            count = 0
+        if count >result:
+            result = count
+    return result
+
+def f6():
+    nums = [-2,1,-3,4,-1,2,1,-5,4]
+    dp = nums[:]
+    print(dp)
+    for i in range(1,len(dp)):
+        if dp[i-1] > 0:
+            dp[i] = dp[i - 1] + dp[i]
+    print(dp)
+
+def f7():
+    s = 'a '
+    s = s.strip()
+    nums = re.split(' ',s)
+    print(nums)
+# 输入：digits = [1,2,3]
+# 输出：[1,2,4]
+def f8():
+    digits = [9,9,9]
+    for i in range(len(digits)-1,-1,-1):
+        if digits[i] +1 == 10:
+            digits[i] = 0
+        else :
+            digits[i] += 1
+            return digits
+    if i == 0 :
+        digits.insert(0,1)
+        return digits
+def f9():
+    x = 9
+    l = 0
+    r = x
+    while l <= r:
+        mid = (l + r) // 2
+        if mid ** 2 <= x and (mid + 1) ** 2 > x:
+            return mid
+        else:
+            if mid ** 2 < x:
+                l = mid + 1
+            else:
+                r = mid - 1
 
 
 if __name__ == '__main__':
-    print(study3())
+    print(f9())
